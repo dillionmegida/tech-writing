@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 type Props = {
   description?: string
   lang?: string
-  title: string
+  title?: string
 }
 
 const Seo = ({ description, lang = 'en', title }: Props) => {
@@ -34,8 +34,7 @@ const Seo = ({ description, lang = 'en', title }: Props) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title || defaultTitle}
       meta={[
         {
           name: `description`,

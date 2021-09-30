@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@/atoms/*": ["src/components/atoms/*"],
-      "@/organisms/*": ["src/components/organisms/*"]
+      "@/molecules/*": ["src/components/molecules/*"],
+      "@/organisms/*": ["src/components/organisms/*"],
+      "@/constants/*": ["src/constants/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

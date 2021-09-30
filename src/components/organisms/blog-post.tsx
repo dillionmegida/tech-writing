@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../bio'
-import Layout from '../layout'
+import Bio from '../molecules/bio'
+import Layout from './layout'
 import Seo from '@/atoms/seo'
 
 const BlogPostTemplate = ({ data, location }) => {
