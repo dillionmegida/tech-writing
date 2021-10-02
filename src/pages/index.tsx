@@ -12,7 +12,7 @@ const HomePage = ({ data }) => {
     <Layout>
       <Seo />
       <div className="container">
-        <h1 className="text-6xl mb-5 font-extrabold text-primary">
+        <h1 className="text-4xl xs:text-5xl sm:text-6xl mb-5 font-extrabold text-primary">
           {siteTitle}
         </h1>
         <Bio />

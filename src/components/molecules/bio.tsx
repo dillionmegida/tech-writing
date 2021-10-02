@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import links from '@/constants/links'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -25,9 +24,9 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="flex mb-10 py-4">
+    <div className="flex flex-wrap sm:flex-nowrap mb-10 py-4">
       <StaticImage
-        className="mr-5 mb-10 w-20 rounded-full"
+        className="mr-5 mb-2 w-20 rounded-full"
         layout="fixed"
         formats={['auto', 'webp', 'avif']}
         src="../../images/profile-pic.jpg"
@@ -37,7 +36,7 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <p className="flex-1 leading-7">
+        <p className="sm:flex-1 w-full leading-7">
           Created by <strong>{author.name}</strong>, {author?.summary || null} I
           created this space to share more about technical writing--getting
           started, getting topics, getting jobs, e.t.c--based on my experience
@@ -45,7 +44,7 @@ const Bio = () => {
           <br />
           <br />
           I'm a Software Engineer, Developer Advocate and Content Creator who
-          loves creating different contents things I learn and work with in
+          loves creating different contents on things I learn and work with in
           Tech. I currently write on{' '}
           {[
             { link: 'https://dillionmegida.com', label: 'my website' },
@@ -70,8 +69,8 @@ const Bio = () => {
             </>
           ))}{' '}
           with some articles on Strapi, Egghead and few other platforms. I make
-          money from writing andw I want to share how I got into all these things
-          with you, here.
+          money from writing and I want to share how I got into all these things
+          for free, with you, here.
           <br />
           <br />
           If you want to be notified when I'm done building this platform with
