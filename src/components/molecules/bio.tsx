@@ -26,7 +26,7 @@ const Bio = () => {
   return (
     <div className="flex flex-wrap sm:flex-nowrap mb-10 py-4">
       <StaticImage
-        className="mr-5 mb-2 w-20 rounded-full"
+        className="mr-5 mb-2 w-20 rounded-full overflow-hidden"
         layout="fixed"
         formats={['auto', 'webp', 'avif']}
         src="../../images/profile-pic.jpg"
@@ -43,8 +43,8 @@ const Bio = () => {
           and all I've learned in this writing journey.
           <br />
           <br />
-          I'm a Software Engineer, Developer Advocate and Content Creator who
-          loves creating different contents on things I learn and work with in
+          I'm a Software Engineer, Developer Advocate, and Content Creator who
+          loves creating different content on things I learn and work with in
           Tech. I currently write on{' '}
           {[
             { link: 'https://dillionmegida.com', label: 'my website' },
@@ -68,7 +68,7 @@ const Bio = () => {
               ,{' '}
             </>
           ))}{' '}
-          with some articles on Strapi, Egghead and few other platforms. I make
+          with some articles on Strapi, Egghead, and few other platforms. I make
           money from writing and I want to share how I got into all these things
           for free, with you, here.
           <br />

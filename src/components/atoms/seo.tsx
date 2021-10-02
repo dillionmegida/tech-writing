@@ -69,7 +69,9 @@ const Seo = ({ description, lang = 'en', title }: Props) => {
           content: metaDescription,
         },
       ]}
-    />
+    >
+      <link rel="canonical" href="http://tech-writing.netlify.app" />
+    </Helmet>
   )
 }
 
