@@ -5,7 +5,7 @@ module.exports = {
       name: `Dillion Megida`,
       summary: `passionate about learning, building, and teaching tech.`,
     },
-    description: `Descirption loading.`,
+    description: `A space created by Dillion, to share his experience and things he has learnt in his Technical Writing career.`,
     siteUrl: `https://tech-writing.netlify.app`,
     social: {
       twitter: `iamdillion`,
