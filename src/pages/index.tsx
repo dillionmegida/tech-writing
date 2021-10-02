@@ -3,20 +3,25 @@ import * as React from 'react'
 import Bio from '../components/molecules/bio'
 import Layout from '@/organisms/layout'
 import Seo from '@/atoms/seo'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-const BlogIndex = ({ data }) => {
+const HomePage = ({ data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout title={siteTitle}>
+    <Layout>
       <Seo title="All posts" />
-      <Bio />
+      <div className="container">
+        <h1 className="text-6xl tracking-tight font-bold text-primary">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+        <Bio />
+      </div>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
   query {

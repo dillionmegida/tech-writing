@@ -3,7 +3,7 @@ module.exports = {
     title: `Simplifying Technical Writing`,
     author: {
       name: `Dillion Megida`,
-      summary: `passionate about teaching tech. I created this space to share more about technical writing--getting started, getting topics, e.t.c--based on my experience and all I've learned in this career journey.`,
+      summary: `passionate about learning, building and teaching tech.`,
     },
     description: `Descirption loading.`,
     siteUrl: `https://tech-writing.netlify.app`,

@@ -25,9 +25,9 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
+    <div className="flex mb-10 py-4">
       <StaticImage
-        className="bio-avatar"
+        className="mr-5 mb-10 w-20 rounded-full"
         layout="fixed"
         formats={['auto', 'webp', 'avif']}
         src="../../images/profile-pic.jpg"
@@ -37,13 +37,23 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong>, {author?.summary || null}
+        <p className="flex-1">
+          Created by <strong>{author.name}</strong>, {author?.summary || null} I
+          created this space to share more about technical writing--getting
+          started, getting topics, e.t.c--based on my experience and all I've
+          learned in this career journey.
           <br />
           <br />
-          Check out <Link to={links.BLOG}>the blog</Link>.<br />
+          Check out{' '}
+          <Link className="text-primary underline" to={links.BLOG}>
+            the blog
+          </Link>
+          .<br />
           <br />
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
+          <a
+            className="text-primary underline"
+            href={`https://twitter.com/${social?.twitter || ``}`}
+          >
             You can follow me on Twitter
           </a>
         </p>

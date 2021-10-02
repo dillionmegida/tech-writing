@@ -1,16 +1,23 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 
-const Layout = ({ title, children }) => {
+import Footer from '@/molecules/footer'
+import Header from '@/molecules/header'
+import styled from 'styled-components'
+
+const Main = styled.main`
+  min-height: 80vh;
+`
+
+type Props = {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: Props) => {
   return (
-    <div className="global-wrapper">
-      <header className="global-header">
-        <h1 className="main-heading">
-          <Link to="/">{title}</Link>
-        </h1>
-      </header>
-      <main>{children}</main>
-      <footer>© {new Date().getFullYear()}</footer>
+    <div>
+      <Header />
+      <Main className="py-10">{children}</Main>
+      <Footer />
     </div>
   )
 }
