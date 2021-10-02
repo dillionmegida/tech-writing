@@ -37,24 +37,65 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <p className="flex-1">
+        <p className="flex-1 leading-7">
           Created by <strong>{author.name}</strong>, {author?.summary || null} I
           created this space to share more about technical writing--getting
-          started, getting topics, e.t.c--based on my experience and all I've
-          learned in this career journey.
+          started, getting topics, getting jobs, e.t.c--based on my experience
+          and all I've learned in this writing journey.
           <br />
           <br />
-          Check out{' '}
+          I'm a Software Engineer, Developer Advocate and Content Creator who
+          loves creating different contents things I learn and work with in
+          Tech. I currently write on{' '}
+          {[
+            { link: 'https://dillionmegida.com', label: 'my website' },
+            {
+              link: 'https://blog.logrocket.com/author/dillion-megida/',
+              label: 'LogRocket',
+            },
+            {
+              link: 'https://www.freecodecamp.org/news/author/dillionmegida/',
+              label: 'FreeCodeCamp',
+            },
+            {
+              link: 'https://www.freecodecamp.org/news/author/dillionmegida/',
+              label: 'Vonage',
+            },
+          ].map(({ link, label }) => (
+            <>
+              <a className="text-primary underline" href={link} key={link}>
+                {label}
+              </a>
+              ,{' '}
+            </>
+          ))}{' '}
+          with some articles on Strapi, Egghead and few other platforms. I make
+          money from writing andw I want to share how I got into all these things
+          with you, here.
+          <br />
+          <br />
+          If you want to be notified when I'm done building this platform with
+          some resources, kindly fill this form:{' '}
+          <a
+            className="text-primary underline"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe8H8-REKoEk0uX_yzk2XRg96Cq8iSqGQVN32o_5QD2vQDL4w/viewform"
+          >
+            Interest Form
+          </a>
+          <br />
+          <br />
+          {/* Check out{' '}
           <Link className="text-primary underline" to={links.BLOG}>
             the blog
           </Link>
           .<br />
-          <br />
+          <br /> */}
+          You can also{' '}
           <a
             className="text-primary underline"
             href={`https://twitter.com/${social?.twitter || ``}`}
           >
-            You can follow me on Twitter
+            follow me on Twitter
           </a>
         </p>
       )}

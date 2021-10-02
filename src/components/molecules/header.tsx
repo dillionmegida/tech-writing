@@ -14,7 +14,7 @@ export default function Header() {
     <header>
       <div className="py-4 container flex justify-between items-center  border-b border-solid border-gray-100">
         <Link to="/">TW</Link>
-        <nav>
+        {/* <nav>
           <ul>
             {navLinks.map(({ label, link }) => (
               <li key={`navlink-${label}`}>
@@ -24,7 +24,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </header>
   )

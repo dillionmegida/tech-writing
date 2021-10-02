@@ -10,10 +10,10 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="All posts" />
+      <Seo />
       <div className="container">
-        <h1 className="text-6xl tracking-tight font-bold text-primary">
-          <Link to="/">{siteTitle}</Link>
+        <h1 className="text-6xl mb-5 font-extrabold text-primary">
+          {siteTitle}
         </h1>
         <Bio />
       </div>
