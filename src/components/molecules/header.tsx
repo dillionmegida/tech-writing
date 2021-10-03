@@ -2,13 +2,14 @@ import links from '@/constants/links'
 import { Link } from 'gatsby'
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-
+import classNames from 'classnames'
 
 const navLinks: { label: string; link: string }[] = [
   {
     label: 'Blog',
     link: links.BLOG,
   },
+  { label: 'Roadmap', link: links.ROADMAP },
 ]
 
 export default function Header() {
@@ -27,17 +28,24 @@ export default function Header() {
             alt="Profile picture"
           />
         </Link>
-        {/* <nav>
-          <ul>
-            {navLinks.map(({ label, link }) => (
-              <li key={`navlink-${label}`}>
-                <Link to={link} activeClassName="text-primary font-bold">
+        <nav>
+          <ul className="flex items-center">
+            {navLinks.map(({ label, link }, i) => (
+              <li
+                className={classNames([i !== 0 && 'ml-5'])}
+                key={`navlink-${label}`}
+              >
+                <Link
+                  partiallyActive
+                  to={link}
+                  activeClassName="text-primary font-bold"
+                >
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-        </nav> */}
+        </nav>
       </div>
     </header>
   )

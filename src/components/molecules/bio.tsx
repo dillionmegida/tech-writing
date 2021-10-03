@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import links from '@/constants/links'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -73,6 +74,13 @@ const Bio = () => {
           for free, with you, here.
           <br />
           <br />
+          You can learn more about me, and this platform{' '}
+          <Link className="text-primary underline" to={links.POST.INTRODUCTION}>
+            in this Introduction piece
+          </Link>
+          .
+          <br />
+          <br />
           If you want to be notified when I'm done building this platform with
           some resources, kindly fill this form:{' '}
           <a
@@ -83,12 +91,12 @@ const Bio = () => {
           </a>
           <br />
           <br />
-          {/* Check out{' '}
+          Check out{' '}
           <Link className="text-primary underline" to={links.BLOG}>
             the blog
           </Link>
           .<br />
-          <br /> */}
+          <br />
           You can also{' '}
           <a
             className="text-primary underline"
