@@ -1,3 +1,5 @@
+import SeparateDot from '@/atoms/separate-dot'
+import { plularize } from '@/utils/string'
 import { Link } from 'gatsby'
 import * as React from 'react'
 import { PostHalf } from 'src/interfaces/Post'
@@ -8,8 +10,9 @@ type Props = {
 
 export default function BlogCard({ post }: Props) {
   const {
-    frontmatter: { title, description },
+    frontmatter: { title, description, date },
     fields: { slug },
+    timeToRead,
   } = post
 
   const postLink = `/blog${slug}`
@@ -22,7 +25,20 @@ export default function BlogCard({ post }: Props) {
       >
         <article>
           <header>
-            <h2 className="text-secondary font-medium text-2xl">{title}</h2>
+            <h2 className="text-secondary font-semibold text-2xl mb-2">
+              {title}
+            </h2>
+            <p className="text-xs text-gray-400">
+              <SeparateDot
+                items={[
+                  <span>
+                    {timeToRead} {plularize('min', timeToRead)} read
+                  </span>,
+                  <span>{date}</span>,
+                ]}
+              />
+            </p>
+            <p className="text-gray-600 mt-3 text-sm">{description}</p>
           </header>
           <section></section>
         </article>
