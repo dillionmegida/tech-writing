@@ -1,12 +1,13 @@
 ---
-title: Introduction to the Simplified Technical Writing platform
-date: 2021-01-03
-description: 'Hello World'
+title: "Introduction to the Simplified Technical Writing platform"
+date: 2021-10-11
+description: >-
+    As a Technical writer who has benefitted from writing, I want to share my knowledge and experience with many people who want to get started or get better. I'm using this space to achieve that.
 ---
 
-Hello world :)
+Hello, world :)
 
-I'm Dillion, a Software Engineer, Developer Advocate and Content Creator. I'm passionate about **teaching Tech, the Web and Software Engineering in general**.
+I'm Dillion, a Software Engineer, Developer Advocate, and Content Creator. I'm passionate about **teaching Tech, the Web, and Software Engineering in general**.
 
 I've been writing technical articles for the past two years. I celebrated [2 years writing technical articles here](https://dillionmegida.com/p/2-year-writing-articles/).
 
@@ -23,17 +24,17 @@ I write (and have written for):
 
 The # sign in front of the publications means I was paid for the articles.
 
-As a Content Creator, I love writing on different publications because I believe different organizations have different audience, and writing for all of them helps me reach out to all those audience. Additionally, I get to learn from different content reviewers and writers across these different organizations.
+As a Content Creator, I love writing on different publications because I believe different organizations have different audiences, and writing for all of them helps me reach out to all those audiences. Additionally, I get to learn from different content reviewers and writers across these different organizations.
 
-I've made more than 1.5 million naira (the last calculation I remember) writing paid technical content. My first paid article was [The Concept of Scope in JavaScript](https://soshace.com/the-concept-of-scope-in-javascript/) on Soshace, of which I was paid $100 (at the time, 36,000 naira). Publishing that article opened more opportunities for me at Soshace, and gradually at other organizations.
+I've made more than 2 million naira writing paid technical content. My first paid article was [The Concept of Scope in JavaScript](https://soshace.com/the-concept-of-scope-in-javascript/) on Soshace, of which I was paid $100 (at the time, 36,000 naira). Publishing that article opened more opportunities for me at Soshace, and gradually at other organizations.
 
 ## So why am I building this platform?
 
 I've been asked a lot of times about getting into technical writing and making money from it. I wrote a basic getting started article here: [Getting Started with Technical Writing](https://dillionmegida.com/p/getting-started-with-technical-writing/).
 
-I've also helped out few friends of mine who are doing very well in the writing space.
+I've also helped out few friends of mine who are now doing very well in the writing space.
 
-Some people are still reaching out to me, so I thought to create a better, more-detailed guide based on all I've learned and my experience in this career.
+Some people are still reaching out to me, so I thought to create a better, more detailed guide based on all I've learned and my experience in this career.
 
 I want to cover more areas on technical writing, address more questions that I've been asked and will be asked, and help out more people to get into technical writing.
 
@@ -42,7 +43,7 @@ I want to cover more areas on technical writing, address more questions that I'v
 Here are some of the things I've gained from writing:
 
 - I've connected with a lot of people who read my content
-- I've learned about new technologies and tools I never knew before or had faint idea of
+- I've learned about new technologies and tools I never knew before or had a faint idea of
 - I've gotten better at writing (the more you write, the more you learn)
 - I've made money from writing
 - I've been recognized for my writing
@@ -59,6 +60,6 @@ Here, I'll share how I've gained the aforementioned benefits.
 
 Want to get started already?
 
-Here's a roadmap I've created with links to resources I've written to keep you on a path.
+Here's a [roadmap](/roadmap) I've created with links to resources I've written to help you follow a path.
 
-You can also choose from the list of resources in the [blog](/blog) page.
+You can also choose from the list of resources on the [blog](/blog) page.
