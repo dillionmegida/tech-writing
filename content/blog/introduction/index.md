@@ -34,7 +34,7 @@ I've been asked a lot of times about getting into technical writing and making m
 
 I've also helped out few friends of mine who are now doing very well in the writing space.
 
-Some people are still reaching out to me, so I thought to create a better, more detailed guide based on all I've learned and my experience in this career.
+People still reach out to me, so I thought to create a better, more detailed guide based on all I've learned and my experience in this career.
 
 I want to cover more areas on technical writing, address more questions that I've been asked and will be asked, and help out more people to get into technical writing.
 

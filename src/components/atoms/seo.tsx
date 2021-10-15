@@ -2,14 +2,21 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { DOMAIN, INTRODUCTION_COVER, LOGO_PATH } from '@/constants/site'
 
 type Props = {
   description?: string
   lang?: string
   title?: string
+  imageCard?: string
 }
 
-const Seo = ({ description, lang = 'en', title }: Props) => {
+const Seo = ({
+  description,
+  lang = 'en',
+  title,
+  imageCard = DOMAIN + INTRODUCTION_COVER,
+}: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -25,6 +32,8 @@ const Seo = ({ description, lang = 'en', title }: Props) => {
       }
     `
   )
+
+  const defaultImageCard = DOMAIN + LOGO_PATH
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
@@ -53,8 +62,16 @@ const Seo = ({ description, lang = 'en', title }: Props) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: imageCard || defaultImageCard,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: imageCard ? `summary_large_image` : `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: imageCard || defaultImageCard,
         },
         {
           name: `twitter:creator`,

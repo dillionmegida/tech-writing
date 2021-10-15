@@ -7,6 +7,7 @@ export default function Roadmap() {
     <Layout>
       <div className="container">
         <Heading level={1}>Roadmap</Heading>
+        <p className='mt-4'>Coming Soon...</p>
       </div>
     </Layout>
   )

@@ -1,11 +1,11 @@
 ---
 title: Getting Started with Technical Writing
-date: 2021-01-06
+date: 2021-10-20
 description: "Hello World"
 ---
 
-Hello world :)
+## What is Technical writing
 
-I'm Dillion, a Software Engineer, Developer Advocate and Content Creator. I'm passionate about **teaching tech**.
+My simple definition of technical writing is **creating written content to share information about tech**.
 
-I've been writing technical articles for the past two years. I celebrated [2 years writing technical articles here](https://dillionmegida.com/p/2-year-writing-articles/).
+Tech here is ambigous because it comprises of many things. It's not just web development. It's not just app development. It ecompasses everything that makes tech possible. From management part to the development part to the design part--all of these are tech-related. And articles on them are called Technical Articles.
