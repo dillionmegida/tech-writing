@@ -26,7 +26,7 @@ The # sign in front of the publications means I was paid for the articles.
 
 As a Content Creator, I love writing on different publications because I believe different organizations have different audiences, and writing for all of them helps me reach out to all those audiences. Additionally, I get to learn from different content reviewers and writers across these different organizations.
 
-I've made more than 2 million naira writing paid technical content. My first paid article was [The Concept of Scope in JavaScript](https://soshace.com/the-concept-of-scope-in-javascript/) on Soshace, of which I was paid $100 (at the time, 36,000 naira). Publishing that article opened more opportunities for me at Soshace, and gradually at other organizations.
+I've made more than $5k writing paid technical content. My first paid article was [The Concept of Scope in JavaScript](https://soshace.com/the-concept-of-scope-in-javascript/) on Soshace, of which I was paid $100 (at the time, 36,000 naira). Publishing that article opened more opportunities for me at Soshace, and gradually at other organizations.
 
 ## So why am I building this platform?
 
