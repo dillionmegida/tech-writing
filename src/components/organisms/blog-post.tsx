@@ -161,6 +161,9 @@ export const pageQuery = graphql`
         description
       }
       timeToRead
+      fields {
+        slug
+      }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
