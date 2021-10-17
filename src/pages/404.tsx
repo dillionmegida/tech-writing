@@ -9,7 +9,7 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <Layout>
-      <Seo title="404: Not Found" />
+      <Seo link="/404" title="404: Not Found" />
       <div className="container">
         <h1 className="text-5xl font-extrabold text-primary">404: Not Found</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>

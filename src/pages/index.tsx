@@ -11,7 +11,7 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo link="/" />
       <div className="container">
         <Heading className="mb-5" size="xxl" level={1}>
           {siteTitle}

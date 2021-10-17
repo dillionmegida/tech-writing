@@ -64,11 +64,16 @@ const BlogPostTemplate = ({ data }) => {
     frontmatter: { title, description, date },
     excerpt,
     timeToRead,
+    fields: { slug },
   } = post
 
   return (
     <Layout>
-      <Seo title={title} description={description || excerpt} />
+      <Seo
+        link={`/blog${slug}`}
+        title={title}
+        description={description || excerpt}
+      />
       <Container className="container">
         <article
           className="blog-post"

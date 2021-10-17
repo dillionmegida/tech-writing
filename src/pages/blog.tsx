@@ -5,13 +5,14 @@ import Layout from '@/organisms/layout'
 import { graphql, Link } from 'gatsby'
 import BlogCard from '@/molecules/blog-card'
 import { PostHalf } from 'src/interfaces/Post'
+import links from '@/constants/links'
 
 export default function BlogIndex({ data }) {
   const posts: PostHalf[] = data.allMarkdownRemark.nodes
 
   return (
     <Layout>
-      <Seo title="All posts" />
+      <Seo link={links.BLOG} title="All posts" />
       <div className="container">
         <h1 className="text-5xl tracking-tight font-bold text-primary">Blog</h1>
         <ul className="mt-6">

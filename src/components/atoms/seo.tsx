@@ -1,14 +1,19 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { DOMAIN, INTRODUCTION_COVER, LOGO_PATH } from '@/constants/site'
+import {
+  DOMAIN,
+  INTRODUCTION_COVER,
+  LOGO_PATH,
+  MONETIZATION_HASH,
+} from '@/constants/site'
 
 type Props = {
   description?: string
   lang?: string
   title?: string
   imageCard?: string
+  link: string
 }
 
 const Seo = ({
@@ -16,6 +21,7 @@ const Seo = ({
   lang = 'en',
   title,
   imageCard = DOMAIN + INTRODUCTION_COVER,
+  link: _link,
 }: Props) => {
   const { site } = useStaticQuery(
     graphql`
@@ -33,6 +39,8 @@ const Seo = ({
     `
   )
 
+  const link = DOMAIN + _link
+
   const defaultImageCard = DOMAIN + LOGO_PATH
 
   const metaDescription = description || site.siteMetadata.description
@@ -49,6 +57,15 @@ const Seo = ({
           name: `description`,
           content: metaDescription,
         },
+        { name: 'author', content: 'Dillion Megida' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'referrer', content: 'origin-when-crossorigin' },
+
+        // monetization
+        { name: 'monetization', content: MONETIZATION_HASH },
+
+        // OG tags
+        { property: `og:url`, content: link },
         {
           property: `og:title`,
           content: title,
@@ -59,12 +76,14 @@ const Seo = ({
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `article`,
         },
         {
           property: `og:image`,
           content: imageCard || defaultImageCard,
         },
+
+        // Twitter tags
         {
           name: `twitter:card`,
           content: imageCard ? `summary_large_image` : `summary`,
@@ -91,15 +110,9 @@ const Seo = ({
         },
       ]}
     >
-      <link rel="canonical" href="http://tech-writing.netlify.app" />
+      <link rel="canonical" href={link} />
     </Helmet>
   )
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  title: PropTypes.string.isRequired,
 }
 
 export default Seo
