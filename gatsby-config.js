@@ -111,6 +111,17 @@ module.exports = {
         ],
       },
     },
+
+    // For google analytics
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: 'G-EWP1N8M68Y',
+        head: true,
+        anonymize: true,
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

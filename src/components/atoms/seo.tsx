@@ -84,6 +84,7 @@ const Seo = ({
         },
 
         // Twitter tags
+        { name: 'twitter:url', content: link },
         {
           name: `twitter:card`,
           content: imageCard ? `summary_large_image` : `summary`,
