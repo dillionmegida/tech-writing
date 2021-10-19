@@ -1,6 +1,14 @@
 const colors = {
   primary: {
     DEFAULT: '#D81E5B',
+    100: '#fae6ec',
+    200: '#f6cdda',
+    300: '#f2b4c8',
+    400: '#ed9bb6',
+    500: '#e982a3',
+    600: '#e56991',
+    700: '#e0507f',
+    800: '#dc376d',
   },
   secondary: {
     DEFAULT: '#23395B',
