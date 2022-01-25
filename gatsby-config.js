@@ -117,6 +117,13 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `dillion-writing`,
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Simplified technical writing`,

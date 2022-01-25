@@ -11,6 +11,7 @@ import SeparateDot from '@/atoms/separate-dot'
 import { plularize } from '@/utils/string'
 import classNames from 'classnames'
 import Share from '@/molecules/share'
+import Disqus from '@/molecules/disqus'
 
 const Container = styled.div``
 
@@ -149,7 +150,7 @@ const BlogPostTemplate = ({ data }) => {
             </div>
           </section>
         </article>
-        <nav className="mt-10 py-5">
+        <nav className="mt-10 pt-4 py-8 border-b border-solid border-grey-100">
           <ul className="grid grid-cols-1 gap-10 sm:grid-cols-2 justify-between">
             <li className="text-left">
               {previous && (
@@ -183,6 +184,11 @@ const BlogPostTemplate = ({ data }) => {
             </li>
           </ul>
         </nav>
+        <Disqus
+          url={`/blog${post.fields.slug}`}
+          postId={post.id}
+          postTitle={post.frontmatter.title}
+        />
       </Container>
     </Layout>
   )

@@ -10,6 +10,7 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "gatsby": "^3.13.1",
+    "gatsby-plugin-disqus": "^1.2.3",
     "gatsby-plugin-feed": "^3.13.0",
     "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-gtag": "^1.0.13",
