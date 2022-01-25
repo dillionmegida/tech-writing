@@ -9,15 +9,24 @@ import styled from 'styled-components'
 import colors from '@/styles/colors'
 import SeparateDot from '@/atoms/separate-dot'
 import { plularize } from '@/utils/string'
+import classNames from 'classnames'
 
 const Container = styled.div``
 
 const Content = styled.div`
   h2 {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 26px;
     color: ${colors.primary.DEFAULT};
     margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: ${colors.primary.DEFAULT};
+    margin-top: 30px;
     margin-bottom: 15px;
   }
 
@@ -31,18 +40,31 @@ const Content = styled.div`
     text-decoration: underline;
   }
 
-  ul {
+  blockquote {
+    padding: 15px;
+    border: 1px solid ${colors.gray[200]};
     margin-bottom: 1em;
-    margin-top: -0.8em;
+    margin-top: 1em;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin: 30px 0;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    margin-bottom: 2em;
+    margin-top: 1em;
 
     li {
-      padding-left: 15px;
       position: relative;
-
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
-
       &:before {
         content: '';
         top: 10px;
@@ -55,17 +77,31 @@ const Content = styled.div`
       }
     }
   }
+
+  ol,
+  ul {
+    padding-left: 15px;
+    li {
+      padding-left: 15px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
 `
 
 const BlogPostTemplate = ({ data }) => {
   const post: PostFull = data.markdownRemark
   const { previous, next } = data
   const {
-    frontmatter: { title, description, date },
+    frontmatter: { title, description, date, cover },
     excerpt,
     timeToRead,
     fields: { slug },
   } = post
+
+  const coverExists = cover && cover.length
 
   return (
     <Layout>
@@ -73,6 +109,7 @@ const BlogPostTemplate = ({ data }) => {
         link={`/blog${slug}`}
         title={title}
         description={description || excerpt}
+        imageCard={coverExists ? `/assets/post-cover/${cover}` : null}
       />
       <Container className="container">
         <article
@@ -80,7 +117,11 @@ const BlogPostTemplate = ({ data }) => {
           itemScope
           itemType="http://schema.org/Article"
         >
-          <header className="border-b border-solid border-grey-100 pb-5">
+          <header
+            className={classNames('border-solid border-grey-100 pb-5', [
+              !coverExists && 'border-b',
+            ])}
+          >
             <Heading level={1} className="mb-2">
               {title}
             </Heading>
@@ -94,8 +135,13 @@ const BlogPostTemplate = ({ data }) => {
                 ]}
               />
             </p>
+            {coverExists && (
+              <div className="border border-primary-100 my-4">
+                <img src={`/assets/post-cover/${cover}`} alt={title} />
+              </div>
+            )}
           </header>
-          <section className="py-5 text-gray-800 border-b border-solid border-grey-100">
+          <section className="py-5 text-gray-800 border-solid border-grey-100 border-b">
             <Content dangerouslySetInnerHTML={{ __html: post.html }} />
           </section>
         </article>
@@ -159,6 +205,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        cover
       }
       timeToRead
       fields {

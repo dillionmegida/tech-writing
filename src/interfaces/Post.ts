@@ -5,6 +5,7 @@ export interface PostHalf {
     title: string
     date: Date
     description: string
+    cover: string
   }
   fields: {
     slug: string
