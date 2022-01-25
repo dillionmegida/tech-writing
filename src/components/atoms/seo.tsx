@@ -20,9 +20,15 @@ const Seo = ({
   description,
   lang = 'en',
   title,
-  imageCard = DOMAIN + INTRODUCTION_COVER,
+  imageCard: _imageCard,
   link: _link,
 }: Props) => {
+  const imageCard = _imageCard
+    ? !_imageCard.startsWith('https')
+      ? DOMAIN + _imageCard
+      : _imageCard
+    : DOMAIN + INTRODUCTION_COVER
+
   const { site } = useStaticQuery(
     graphql`
       query {
