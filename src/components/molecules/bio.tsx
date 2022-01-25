@@ -81,7 +81,7 @@ const Bio = () => {
           .
           <br />
           <br />
-          If you want to be notified when I'm done building this platform with
+          {/* If you want to be notified when I'm done building this platform with
           some resources, kindly fill this form:{' '}
           <a
             className="text-primary underline"
@@ -90,7 +90,7 @@ const Bio = () => {
             Interest Form
           </a>
           <br />
-          <br />
+          <br /> */}
           Check out{' '}
           <Link className="text-primary underline" to={links.BLOG}>
             the blog
