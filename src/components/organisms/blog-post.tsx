@@ -10,6 +10,7 @@ import colors from '@/styles/colors'
 import SeparateDot from '@/atoms/separate-dot'
 import { plularize } from '@/utils/string'
 import classNames from 'classnames'
+import Share from '@/molecules/share'
 
 const Container = styled.div``
 
@@ -143,6 +144,9 @@ const BlogPostTemplate = ({ data }) => {
           </header>
           <section className="py-5 text-gray-800 border-solid border-grey-100 border-b">
             <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="mt-5">
+              <Share url={`/blog${slug}`} title={title} />
+            </div>
           </section>
         </article>
         <nav className="mt-10 py-5">
