@@ -1,8 +1,9 @@
 ---
-title: "Introduction to the Simplified Technical Writing platform"
+title: 'Introduction to the Simplified Technical Writing platform'
 date: 2021-10-11
 description: >-
-    As a Technical writer who has benefitted from writing, I want to share my knowledge and experience with many people who want to get started or get better. I'm using this space to achieve that.
+  As a Technical writer who has benefitted from writing, I want to share my knowledge and experience with many people who want to get started or get better. I'm using this space to achieve that.
+cover: 'introduction-cover.png'
 ---
 
 Hello, world :)
