@@ -1,6 +1,6 @@
 ---
 title: 'Benefits of Technical Writing'
-date: 2021-10-11
+date: 2021-10-15
 description: >-
   Technical writing has many benefits which can be different for each person. Here, I share how I've benefitted from my writing career.
 cover: 'benefits-technical-writing.png'
