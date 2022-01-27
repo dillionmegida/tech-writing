@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import links from '@/constants/links'
+import NewTabLink from '@/atoms/new-tab-link'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -96,6 +97,13 @@ const Bio = () => {
             the blog
           </Link>
           .<br />
+          <br />
+          Or you can{' '}
+          <NewTabLink className="underline text-primary" href={links.CALENDLY}>
+            book a meeting with me
+          </NewTabLink>{' '}
+          🙂 if you have technical writing questions.
+          <br />
           <br />
           You can also{' '}
           <a

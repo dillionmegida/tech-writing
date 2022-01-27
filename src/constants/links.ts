@@ -13,6 +13,8 @@ const links = {
       '/cover-letter-template-for-writing-jobs'
     ),
   },
+
+  CALENDLY: 'https://calendly.com/dillionmegida',
 }
 
 export default links
