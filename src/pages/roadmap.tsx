@@ -20,7 +20,7 @@ const POSTS = [
   },
   {
     title: 'Getting Technical Writing Topics',
-    link: links.POST.GETTING_STARTED,
+    link: links.POST.WRITING_TOPICS,
   },
   {
     title: 'Platforms to write paid articles',
