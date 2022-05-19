@@ -25,5 +25,6 @@ I'll share a list of platforms where you can get paid to write articles in this 
 13. [Strapi - up to $200](https://strapi.io/write-for-the-community): The pay depends on the length of the article. Check the referenced page for more info.
 14. [Vonage - $500](https://learn.vonage.com/spotlight/)
 15. [Section.io](https://github.com/section-engineering-education/engineering-education): Required to have an active PayPal account to receive payment, but you're free to write for free.
+16. [SigNoz - $150](https://signoz.io/technical-writer-program/): Interested in topics like Uisng SigNoz to monitor applications, OpenTelemetry, Distributed Tracing, and more.
 
 With time, I'd provide more details for each platform. This will be a list I'll update as constantly as possible.
